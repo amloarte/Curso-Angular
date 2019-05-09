@@ -1,0 +1,30 @@
+<h1 class="text-center">{{title}}</h1>
+
+
+
+<div class="row">
+
+    <dir class="col">
+        <h1>*ngif</h1>
+        <hr>
+
+        <div *ngIf="mostrar" class="card " style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text ">{{frase.mensaje}}.</p>
+
+            </div>
+        </div>
+        <a (click)="mostrar = !mostrar" href="#" class="btn btn-outline-primary btn-block">Go somewhere</a>
+    </dir>
+    <dir class="col">
+        <h1>*ngfor</h1>
+
+        <div class="list-group" style=" width: 100%; ">
+            <a *ngFor="let peliculas of personajes; let i = index" href="# " class="list-group-item list-group-item-action "> {{i+1}} {{personajes}}</a>
+
+            <a href="# " class="list-group-item list-group-item-action disabled " tabindex="-1 " aria-disabled="true ">Vestibulum at eros</a>
+        </div>
+    </dir>
+</div>
